@@ -133,6 +133,22 @@ const MeomoBody = () => {
 
 ## ✔️ 나머지 구현 기능은 Todos와 비슷함
 
+## 🔴 CSS => SASS
+
+```SASS
+ .content {
+      // border-top: 1px solid #bebebe;
+      margin: 40px 0px;
+      padding: 15 px;
+  
+      p {
+        padding: 8px;
+        font-size: 12pt;
+        color: #999;
+      }
+    }
+```
+
 ---
  
 
