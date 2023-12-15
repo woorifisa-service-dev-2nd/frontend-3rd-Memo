@@ -9,7 +9,7 @@ const MemoHeader = () => {
 
   return (
     <div>
-    <h1> 메모장 </h1>
+    <h1> 방명록 </h1>
     
     </div>    
   )
