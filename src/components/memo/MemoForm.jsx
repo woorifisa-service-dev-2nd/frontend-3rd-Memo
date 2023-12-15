@@ -3,12 +3,9 @@ import React, { useState } from 'react'
 
 
 
-const MemoForm = ({ memos, onAdd, onClose }) => {
+const MemoForm = ({ memo, onAdd, onClose }) => {
 
 
-    const [id, setId] = useState('');
-    const [title, setTitle] = useState('');
-    const [summary, setSummary] = useState('');
 
     const addMemoHandler = () => {
         onAdd({ id, title, summary });
@@ -27,11 +24,11 @@ const MemoForm = ({ memos, onAdd, onClose }) => {
         <div>
             <h1 className="title"> {'⌚️' + dateString + '😀'} </h1>
             <div className="content">
-                <h4><input type='text' placeholder='작성자를 입력하세요' name='id' value={id} onChange={e => setId(e.target.value)}></input></h4>
+                <h4><input type='text' placeholder='작성자를 입력하세요' name='id' value={memo.id} onChange={e => setId(e.target.value)}></input></h4>
                 <br />
-                <h4><input type='text' placeholder='제목을 입력하세요' name='title' value={title} onChange={e => setTitle(e.target.value)}></input></h4>
+                <h4><input type='text' placeholder='제목을 입력하세요' name='title' value={memo.title} onChange={e => setTitle(e.target.value)}></input></h4>
                 <br />
-                <textarea name='content' placeholder='내용을 입력하세요' value={summary} className='content' onChange={e => setSummary(e.target.value)}></textarea>
+                <textarea name='content' placeholder='내용을 입력하세요' value={memo.summary} onChange={e => setSummary(e.target.value)}></textarea>
             </div>
             <div className="button-wrap" style={{display: 'flex'}}>
                 <button onClick={addMemoHandler}>등록</button>
