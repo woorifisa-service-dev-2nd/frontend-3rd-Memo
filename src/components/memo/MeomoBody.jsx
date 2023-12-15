@@ -1,81 +1,73 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Modal from '../ui/Modal';
 import { createPortal } from 'react-dom';
 import MemoForm from './MemoForm';
+import MemoItem from './MemoItem';
 
 
 
 const memos = [
-    {
-      id: "jiholine10",
-      title: '안녕',
-      summary: '안녕한다 얘들아',
-      
-    },
-    {
-      id: "park5606",
-      title: '재밌게 놀사람',
-      summary: '건대로 모여라',
-      
-    },
-    {
-      id: "jihwan",
-      title: '소개 받을분',
-      summary: '커피를 마시고 영화 ㄱㄱ',
-      
-    }
-  ];
+  {
+    uid: "1",
+    id: "jiholine10",
+    title: '안녕',
+    summary: '안녕한다 얘들아',
+  },
+  {
+    uid: "2",
+    id: "park5606",
+    title: '재밌게 놀사람',
+    summary: '건대로 모여라',
+  },
+  {
+    uid: "3",
+    id: "jihwan",
+    title: '소개 받을분',
+    summary: '커피를 마시고 영화 ㄱㄱ',
+  }
+];
 
 
 const MeomoBody = () => {
-
-    const [plusmemo, setMemo] = useState(memos);
-
-    const addMemoHandler = ({id, title, summary}) => {
-      const newMemo = {
-          id,
-          title,
-          summary
-      };
+  const [plusmemo, setMemo] = useState(memos);
   
-      const updatedmemos = [...plusmemo, newMemo];
-      setMemo(updatedmemos);
-  
-  
-    }
+  const addMemoHandler = ({ id, title, summary }) => {
+    const newMemo = {
+      uid,
+      id,
+      title,
+      summary
+    };
+    setUid(uid + 1);
+    const updatedmemos = [...plusmemo, newMemo];
+    setMemo(updatedmemos);
+  }
 
-    const [isOpen, open] = useState(false);
-    const openModal = () => open(true);
-    const closeModal = () => open(false);
-    
+  const [uid, setUid] = useState(4);
+  const [isOpen, open] = useState(false);
+  const openModal = () => open(true);
+  const closeModal = () => open(false);
+
   return (
     <table>
-    <tbody>
-    <tr className='trList'>
-      {
-        plusmemo.map(memo =>
-          <td className='cell' key={memo.id}>
-            <div className='inner'>
-              <h2 > {memo.id} </h2>
-              <h5 > {memo.title} </h5><br /><br />
-              <h4 className="text-ellipsis overflow-hidden ..."> {memo.summary} </h4><br />
+      <tbody>
+        <tr className='trList'>
+          {memos.map(memo => <MemoItem memo={memo} key={memo.uid} isOpen={isOpen} onOpen={openModal} onClose={closeModal} />)}
+
+          <td className='cell' >
+            <div className='inner' onClick={openModal}>
+              <img src={'/plus.png'} className='picture' alt='logo' />
             </div>
           </td>
-        )}
-        <td className='cell' >
-      <div className='inner' onClick={openModal}>
-        <img src={'/plus.png'} className='picture' alt='logo' />
-      </div>
-    </td>
 
-    </tr>
-  </tbody>
-  {isOpen && createPortal(
-        <Modal >
-            <MemoForm memos={memos} onClose={closeModal} onAdd={addMemoHandler}/>
-        </Modal>, 
+        </tr>
+      </tbody>
+      {isOpen && createPortal(
+        <Modal onClose={closeModal}>
+          <MemoForm memos={memos} onClose={closeModal} onAdd={addMemoHandler} />
+        </Modal>,
         document.body)}
-  </table>
+    </table>
   )
 }
 
