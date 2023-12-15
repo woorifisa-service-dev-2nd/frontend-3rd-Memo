@@ -75,7 +75,7 @@ button{
 }
 .inner:hover{
   box-shadow: 8px 8px 16px #e4e4e4, -8px -8px 16px #ffffff;
-  border: 5px solid #79767600;
+  /* border: 5px solid #79767600; */
 }
 .fav{
   color: #f1c40f;

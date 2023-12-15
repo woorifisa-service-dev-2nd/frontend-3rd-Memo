@@ -95,13 +95,16 @@ const MeomoBody = () => {
           {
             plusmemo.map(memo =>
               <td className='cell' key={memo.uid}>
-                <div className='inner' onClick={() => { openModal(memo.uid) }}>
+                <div className='inner'>
                 <button onClick={()=>{starClick(memo.uid)}} className={returnFavClass(memo.favorite)}>{returnStar(memo.favorite)}</button>
-                <h5 > {memo.title} </h5>
-                <div className='container right-fix user-id'><div> {memo.id} </div></div>
-                <h4 className="text-ellipsis overflow-hidden ..."> {memo.summary} </h4>
-                <h1>{memo.updateTime}</h1>
+                <div onClick={() => { openModal(memo.uid) }}>
+                   <h5 > {memo.title} </h5>
+                  <div className='container right-fix user-id'><div> {memo.id} </div></div>
+                  <h4 className="text-ellipsis overflow-hidden ..."> {memo.summary} </h4>
+                  <h1>{memo.updateTime}</h1>
+                  </div>
                 </div>
+               
                 {isOpen && createPortal(
                   <Modal onClose={closeModal}>
                     <MemoForm memo={plusmemo[curUid - 1]} onAdd={addMemoHandler} onClose={closeModal}>#</MemoForm>
