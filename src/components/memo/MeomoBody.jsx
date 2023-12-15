@@ -8,6 +8,7 @@ const memos = [
       id: "jiholine10",
       title: '안녕',
       summary: '안녕한다 얘들아',
+      updateTime: '23.12.14 10:05:23',
       favorite: false,
     },
     {
@@ -15,6 +16,7 @@ const memos = [
       id: "park5606",
       title: '재밌게 놀사람',
       summary: '건대로 모여라',
+      updateTime: '23.12.14 10:05:23',
       favorite: false,
     },
     {
@@ -22,6 +24,7 @@ const memos = [
       id: "jihwan",
       title: '소개 받을분',
       summary: '커피를 마시고 영화 ㄱㄱ',
+      updateTime: '23.12.14 10:05:23',
       favorite: false,
     }
   ];
@@ -88,10 +91,11 @@ const MeomoBody = () => {
         plusmemo.map(memo =>
           <td className='cell' key={memo.uid}>
             <div className='inner'>
-            <button onClick={()=>{starClick(memo.uid)}} className={returnFavClass(memo.favorite)}>{returnStar(memo.favorite)}</button>
-              <h2 > {memo.id} </h2>
-              <h5 > {memo.title} </h5><br /><br />
-              <h4 className="text-ellipsis overflow-hidden ..."> {memo.summary} </h4><br />
+              <button onClick={()=>{starClick(memo.uid)}} className={returnFavClass(memo.favorite)}>{returnStar(memo.favorite)}</button>
+              <h5 > {memo.title} </h5>
+              <div className='container right-fix user-id'><div> {memo.id} </div></div>
+              <h4 className="text-ellipsis overflow-hidden ..."> {memo.summary} </h4>
+              <h1>{memo.updateTime}</h1>
             </div>
           </td>
         )}

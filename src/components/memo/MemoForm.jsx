@@ -31,7 +31,7 @@ const MemoForm = ({ memos, onAdd, onClose }) => {
                 <br />
                 <h4><input type='text' placeholder='제목을 입력하세요' name='title' value={title} onChange={e => setTitle(e.target.value)}></input></h4>
                 <br />
-                <textarea name='content' placeholder='내용을 입력하세요' value={summary} onChange={e => setSummary(e.target.value)}></textarea>
+                <textarea name='content' placeholder='내용을 입력하세요' value={summary} className='content' onChange={e => setSummary(e.target.value)}></textarea>
             </div>
             <div className="button-wrap" style={{display: 'flex'}}>
                 <button onClick={addMemoHandler}>등록</button>

@@ -32,17 +32,26 @@
   left: -3.7rem;
   top: 1.2rem;
 }
+.right-fix{
+  position: relative;
+  right: -2.7rem;
+}
+.user-id{
+  color: #51504f9d;
+  font-size: 0.4rem;
+  height: 1rem;
+  padding: 0rem;
+}
+button{
+  border: none;
+}
 .star-btn{
-  border : none;
   font-size: 1.5rem;
-
   color: #bebaba;
 }
 .star-btn:hover{
   color: #f1c40f;
 }
-
-
 .inner {
   width: 230px;
   height: 230px;
@@ -75,7 +84,7 @@
   flex-wrap: wrap;
   flex-direction: row;
 }
-h5, h4, h3, h2, h1, p {
+h5, h4, h3, h2, h1 {
   color : #403F3E;
   font-weight : 300;
   margin: 5px;
@@ -86,6 +95,9 @@ h5, h4, h3, h2, h1, p {
 }
 .container {
   padding: 5%;
+}
+.content{
+  height: 10rem;
 }
 @media screen and (min-device-width: 375px) and (max-device-width: 768px) {
   .buttonTr {
