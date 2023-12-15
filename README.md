@@ -53,15 +53,15 @@
 
 # 4. 주된 도메인 용어 및 Component 구성 👨‍🏫
 | 도메인 | 설명 | 
-| --------- | --------------------------------------------------------------- |
-| returnFavClass |  |
-| returnStar |  |
-| starClick |  |
+| --------- | ---------- |
+| returnFavClass | ☑️ |
+| returnStar | ☑️ |
+| starClick | ☑️ |
 
 
 
 | Component | 설명 |
-| --------- | --------------------------------------------------------------- |
+| --------- | ---------- |
 | MemoHeader | ☑️ |
 | MemoBody | ☑️ |
 | MemoItem | ☑️ |
@@ -73,7 +73,7 @@
 
 # 5. 핵심 기능 설명 및 구현 방법 👨‍🏫
 
-## 별표 눌릴시 메모장 최상단 이동
+## ⭐ 별표 눌릴시 메모장 최상단 이동
 ```javascript
   const starClick = (uid) => {
     const newMemo = plusmemo.map(memo => {
@@ -99,7 +99,7 @@
   }
 ```
 
-## 메모장 추가시 시간
+## ⏱️ 메모장 추가시 시간
 ```javascript
    function getTimeStamp() {
     const date = new Date();
@@ -131,7 +131,7 @@ const MeomoBody = () => {
     };
 ```
 
-## 나머지 구현 기능은 Todos와 비슷함
+## ✔️ 나머지 구현 기능은 Todos와 비슷함
 
 ---
  
