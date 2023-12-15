@@ -4,6 +4,22 @@
   font-weight: normal;
   font-style: normal;
 }
+.header-font {
+  font-size: 2rem;
+}
+.time {
+  font-size: 0.6rem;
+  opacity: 0.5;
+}
+.id-size {
+  font-size: 0.4rem;
+}
+.summary {
+  font-size: 0.6rem;
+  opacity: 0.8;
+  
+}
+
 
 .App {
   text-align: center;
@@ -14,6 +30,7 @@
   font-family: 'GangwonEduPowerExtraBoldA';
   font-size: 30px;
 }
+
 .container{
   display: flex;
   align-items: center;
@@ -122,4 +139,5 @@ h5, h4, h3, h2, h1 {
     text-align: center;
     flex-direction: row;
   }
+
 }
