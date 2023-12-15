@@ -1,9 +1,10 @@
-![header](https://capsule-render.vercel.app/api?type=Venom&color=auto&height=300&section=header&text=Memo%20Memo&fontSize=90)
+![header](https://capsule-render.vercel.app/api?type=Venom&color=auto&height=300&section=header&text=Guest%20Book&fontSize=90)
 
 
-주제 : React를 활용한 메모장 만들기
 
-# 📝 막써 메모장 📖
+주제 : React를 활용한 방명록 만들기
+
+# 📝 방명록 📖
 
 ## 메인 화면
 
