@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Modal from '../ui/Modal';
 import { createPortal } from 'react-dom';
 import MemoForm from './MemoForm';
+import MemoItem from './MemoItem';
 
 
 
@@ -88,32 +89,26 @@ const MeomoBody = () => {
   return (
     <table>
     <tbody>
-    <tr className='trList'>
-      {
-        plusmemo.map(memo =>
-          <td className='cell' key={memo.uid}>
-            <div className='inner'>
-            <button onClick={()=>{starClick(memo.uid)}} className={returnFavClass(memo.favorite)}>{returnStar(memo.favorite)}</button>
-              <h2 > {memo.id} </h2>
-              <h5 > {memo.title} </h5><br /><br />
-              <h4 className="text-ellipsis overflow-hidden ..."> {memo.summary} </h4><br />
-            </div>
-          </td>
-        )}
-        <td className='cell' >
-      <div className='inner' onClick={openModal}>
-        <img src={'/plus.png'} className='picture' alt='logo' />
-      </div>
-    </td>
-
-    </tr>
-  </tbody>
-  {isOpen && createPortal(
-        <Modal >
-            <MemoForm memos={memos} onClose={closeModal} onAdd={addMemoHandler}/>
-        </Modal>, 
+      <tr className='trList'>
+        {
+          plusmemo.map(memo =>{
+            <td className='cell' key={memo.uid}>
+              <div className='inner'>
+                <button onClick={()=>{starClick(memo.uid)}} className={returnFavClass(memo.favorite)}>{returnStar(memo.favorite)}</button>
+                <h2 > {memo.id} </h2>
+                <h5 > {memo.title} </h5><br /><br />
+                <h4 className="text-ellipsis overflow-hidden ..."> {memo.summary} </h4><br />
+              </div>
+            </td>})
+        }
+        </tr>
+      </tbody>
+      {isOpen && createPortal(
+        <Modal onClose={closeModal}>
+          <MemoForm memos={memos} onClose={closeModal} onAdd={addMemoHandler} />
+        </Modal>,
         document.body)}
-  </table>
+    </table>
   )
 }
 
