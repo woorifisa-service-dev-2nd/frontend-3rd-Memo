@@ -28,18 +28,53 @@ const memos = [
       favorite: false,
     }
   ];
+
+  function getTimeStamp() {
+    const date = new Date();
+    console.log(date);
+    const year = date.getFullYear();
+    const month = ('0' + (date.getMonth() + 1)).slice(-2);
+    const day = ('0' + date.getDate()).slice(-2);
+    const hour = ('0' + date.getHours()).slice(-2);
+    const min = ('0' + date.getMinutes()).slice(-2);
+    const sec = ('0' + date.getSeconds()).slice(-2);
+    const dateString = year + '-' + month + '-' + day + ' ' + hour + ':' + min + ':' + sec;
+  
+    return dateString;
+  }
+  
+  
+  
 const MeomoBody = () => {
   const [plusmemo, setMemo] = useState(memos);
-  const addMemoHandler = ({ id, title, summary }) => {
+  const addMemoHandler = ({ getUid, id, title, summary }) => {
+    console.log(getUid);
     const newMemo = {
-      uid,
+      uid: getUid ? getUid : uid,
       id,
       title,
-      summary
+      summary,
+      updateTime: getTimeStamp(),
+      favorite: false,
     };
-    setUid(uid + 1);
-    const updatedmemos = [...plusmemo, newMemo];
-    setMemo(updatedmemos);
+    console.log(newMemo);
+    let newMemos;
+    if(getUid !== 0) {
+      newMemos = plusmemo.map(memo =>{
+        if(memo.uid == getUid){
+          return newMemo;
+        }else{
+          return memo;
+        }
+      });
+    }
+    else{
+      setUid(uid + 1);
+      console.log(...plusmemo);
+      newMemos = [...plusmemo, newMemo];
+    }
+    console.log(newMemos);
+    setMemo(newMemos);
   }
   const [curUid, setCurUid] = useState(0);
   const [uid, setUid] = useState(4);
