@@ -8,10 +8,7 @@ const MemoHeader = () => {
   
 
   return (
-    <div>
-    <h1> 방명록 </h1>
-    
-    </div>    
+    <div className='header-font'> 방명록 </div>    
   )
 }
 

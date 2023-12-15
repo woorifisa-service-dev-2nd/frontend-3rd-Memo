@@ -44,7 +44,7 @@ const memos = [
   }
   
   
-  
+
 const MeomoBody = () => {
   const [plusmemo, setMemo] = useState(memos);
   const addMemoHandler = ({ getUid, id, title, summary }) => {
@@ -131,15 +131,15 @@ const MeomoBody = () => {
             plusmemo.map(memo =>
               <td className='cell' key={memo.uid}>
                 <div className='inner'>
-                <button onClick={()=>{starClick(memo.uid)}} className={returnFavClass(memo.favorite)}>{returnStar(memo.favorite)}</button>
-                <div onClick={() => { openModal(memo.uid) }}>
-                   <h5 > {memo.title} </h5>
-                  <div className='container right-fix user-id'><div> {memo.id} </div></div>
-                  <h4 className="text-ellipsis overflow-hidden ..."> {memo.summary} </h4>
-                  <h1>{memo.updateTime}</h1>
+                  <button onClick={() => { starClick(memo.uid) }} className={returnFavClass(memo.favorite)}>{returnStar(memo.favorite)}</button>
+                  <div onClick={() => { openModal(memo.uid) }}>
+                    <div classNmae='title'> {memo.title} </div>
+                    <h4 className="summary text-ellipsis overflow-hidden ..."> {memo.summary} </h4>
+                    <div className='container right-fix user-id'><div className='time'> {memo.id} </div></div>
+                    <div className='container right-fix time'>{memo.updateTime}</div>
                   </div>
                 </div>
-               
+
                 {isOpen && createPortal(
                   <Modal onClose={closeModal}>
                     <MemoForm memo={plusmemo[curUid - 1]} onAdd={addMemoHandler} onClose={closeModal}>#</MemoForm>
