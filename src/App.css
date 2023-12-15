@@ -17,10 +17,7 @@
 .summary {
   font-size: 0.6rem;
   opacity: 0.8;
-  
 }
-
-
 .App {
   text-align: center;
 }
@@ -30,19 +27,16 @@
   font-family: 'GangwonEduPowerExtraBoldA';
   font-size: 30px;
 }
-
 .container{
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .container{
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .cell {
   width: 300;
   height: 300;
@@ -72,16 +66,16 @@ button{
 }
 .star-btn{
   font-size: 1.5rem;
-  color: #bebaba;
+  color: #BEBABA;
 }
 .star-btn:hover{
-  color: #f1c40f;
+  color: #F1C40F;
 }
 .inner {
   width: 230px;
   height: 230px;
   border-radius: 20px;
-  box-shadow: 5px 5px 10px #e4e4e4, -5px -5px 10px #ffffff;
+  box-shadow: 5px 5px 10px #E4E4E4, -5px -5px 10px #FFFFFF;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -91,13 +85,12 @@ button{
   align-items: center;
 }
 .inner:hover{
-  box-shadow: 8px 8px 16px #e4e4e4, -8px -8px 16px #ffffff;
+  box-shadow: 8px 8px 16px #E4E4E4, -8px -8px 16px #FFFFFF;
   /* border: 5px solid #79767600; */
 }
 .fav{
-  color: #f1c40f;
+  color: #F1C40F;
 }
-
 .picture {
   height: 150px;
   width: 170px;
@@ -139,5 +132,4 @@ h5, h4, h3, h2, h1 {
     text-align: center;
     flex-direction: row;
   }
-
 }

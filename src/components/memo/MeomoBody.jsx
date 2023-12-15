@@ -135,7 +135,7 @@ const MeomoBody = () => {
                   <div onClick={() => { openModal(memo.uid) }}>
                     <div classNmae='title'> {memo.title} </div>
                     <h4 className="summary text-ellipsis overflow-hidden ..."> {memo.summary} </h4>
-                    <div className='container right-fix user-id'><div className='time'> {memo.id} </div></div>
+                    <div className='user-id'><div className='container right-fix time'> {memo.id} </div></div>
                     <div className='container right-fix time'>{memo.updateTime}</div>
                   </div>
                 </div>
