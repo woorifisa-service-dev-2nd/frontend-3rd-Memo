@@ -51,25 +51,23 @@
   
 ---
 
-# 4. 도메인 용어 , Component 구성 👨‍🏫
+# 4. 주된 도메인 용어 및 Component 구성 👨‍🏫
 | 도메인 | 설명 | 
 | --------- | --------------------------------------------------------------- |
 | returnFavClass |  |
 | returnStar |  |
 | starClick |  |
-| addMemoHandler |   |
-| openModal |  |
-| closeModal |  |
+
 
 
 | Component | 설명 |
 | --------- | --------------------------------------------------------------- |
-| MemoHeader |  |
-| MemoBody |  |
-| MemoItem |  |
-| MemoForm |  |
-| Modal |  |
-| Defaultlayout |  |
+| MemoHeader | ☑️ |
+| MemoBody | ☑️ |
+| MemoItem | ☑️ |
+| MemoForm | ☑️ |
+| Modal | ☑️ |
+| Defaultlayout | ☑️ |
 ---
 
 
