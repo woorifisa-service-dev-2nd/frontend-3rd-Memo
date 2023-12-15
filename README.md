@@ -45,10 +45,10 @@
 # 4. 도메인 용어 정의 👨‍🏫
 | 도메인 | 설명 |
 | --------- | --------------------------------------------------------------- |
-| textarea |  temperature: 온도,<br /> rainPercent: 강수확률,<br /> recommendCloth: 옷추천 문구 |
-| chooseCloth() | 옷차림 추천해주는 부분,<br />tem = 1시간 기온 데이터 |
-| setSkyStatus() | skyValue - 하늘상태 수치 , 하늘 상태에 따른 상단 이미지 변경 |
-| weatherText() getWeatherData | 날씨 공공 데이터를 가져와 전반적인 기능을 구현하는 코드 부분 |
+|  |   |
+|  |  |
+|  |  |
+| |  |
 
 ---
 
