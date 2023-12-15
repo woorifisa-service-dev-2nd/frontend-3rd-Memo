@@ -8,7 +8,7 @@ const memos = [
       id: "jiholine10",
       title: '안녕',
       summary: '안녕한다 얘들아',
-      updateTime: '23.12.14 10:05:23',
+      updateTime: '23-12-11 10:05:23',
       favorite: false,
     },
     {
@@ -16,7 +16,7 @@ const memos = [
       id: "park5606",
       title: '재밌게 놀사람',
       summary: '건대로 모여라',
-      updateTime: '23.12.14 10:05:23',
+      updateTime: '23-12-13 15:05:23',
       favorite: false,
     },
     {
@@ -24,7 +24,7 @@ const memos = [
       id: "jihwan",
       title: '소개 받을분',
       summary: '커피를 마시고 영화 ㄱㄱ',
-      updateTime: '23.12.14 10:05:23',
+      updateTime: '23-12-14 20:05:23',
       favorite: false,
     }
   ];

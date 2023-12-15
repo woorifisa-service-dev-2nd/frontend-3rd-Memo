@@ -40,6 +40,7 @@ const MemoForm = ({ memo, onAdd, onClose }) => {
                 <br />
                 <textarea name='content' placeholder='내용을 입력하세요' value={summary} onChange={e => setSummary(e.target.value)}></textarea>
             </div>
+            <br /><br />
             <div className="button-wrap" style={{display: 'flex'}}>
                 <button onClick={addMemoHandler}>등록</button>
                 <button onClick={onClose}>닫기</button>
