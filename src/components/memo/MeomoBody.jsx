@@ -44,7 +44,6 @@ const memos = [
   }
   
   
-
 const MeomoBody = () => {
   const [plusmemo, setMemo] = useState(memos);
   const addMemoHandler = ({ getUid, id, title, summary }) => {
@@ -109,16 +108,10 @@ const MeomoBody = () => {
       return memo;
     })
     newMemo.sort((a, b) => {
-      if (a.favorite && b.favorite) {
-        if (a.id < b.id) return -1;
-        if (a.id > b.id) return 1;
-      }
       if (a.favorite && !b.favorite) return -1;
       if (!a.favorite && b.favorite) return 1
-      if (!a.favorite && !b.favorite) {
-        if (a.id < b.id) return -1;
-        if (a.id > b.id) return 1;
-      }
+      if (a.id < b.id) return -1;
+      if (a.id > b.id) return 1;
       return 0;
     })
     setMemo(newMemo);
@@ -142,7 +135,7 @@ const MeomoBody = () => {
 
                 {isOpen && createPortal(
                   <Modal onClose={closeModal}>
-                    <MemoForm memo={plusmemo[curUid - 1]} onAdd={addMemoHandler} onClose={closeModal}>#</MemoForm>
+                    <MemoForm memo={plusmemo.filter((memo)=>{if(memo.uid == curUid) return memo})[0]} onAdd={addMemoHandler} onClose={closeModal}>#</MemoForm>
                   </Modal>,
                   document.body
                 )}
